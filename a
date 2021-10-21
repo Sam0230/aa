@@ -1,4 +1,4 @@
-curl 'https://ghcr.io/v2/homebrew/core/gcc/blobs/sha256:23ec727fa684a9f65cf9f55d61d208486d5202fb6112585a01426ac636724e56' -H 'Authorization: Bearer QQ==' -o aaa
+wget 'https://ghcr.io/v2/homebrew/core/gcc/blobs/sha256:23ec727fa684a9f65cf9f55d61d208486d5202fb6112585a01426ac636724e56' --header 'Authorization: Bearer QQ==' -O aaa
 file aaa
 tar -xf aaa
 cd gcc/11.2.0/bin
