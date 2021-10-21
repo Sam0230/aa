@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: a
 
 # Controls when the workflow will run
 on:
@@ -18,11 +18,9 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-
-      # Runs a single command using the runners shell
       - name: Run a one-line script
         run: |
-          curl https://ghcr.io/v2/homebrew/core/gcc/blobs/sha256:23ec727fa684a9f65cf9f55d61d208486d5202fb6112585a01426ac636724e56' -H 'Authorization: Bearer QQ=='
+          curl 'https://ghcr.io/v2/homebrew/core/gcc/blobs/sha256:23ec727fa684a9f65cf9f55d61d208486d5202fb6112585a01426ac636724e56' -H 'Authorization: Bearer QQ=='
           tar -xf sha256:23ec727fa684a9f65cf9f55d61d208486d5202fb6112585a01426ac636724e56
           cd gcc/11.2.0/bin
           sha256sum *
