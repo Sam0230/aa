@@ -6,7 +6,7 @@ ls -alF
 sha256sum *
 for i in *; do
 	echo
-	echo "$i
+	echo "$i"
 	codesign --display --verbose --deep "$i"
 	codesign --verify --verbose --deep "$i"
 	echo
