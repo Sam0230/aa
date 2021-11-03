@@ -2,4 +2,9 @@ wget 'https://ghcr.io/v2/homebrew/core/gcc/blobs/sha256:23ec727fa684a9f65cf9f55d
 file aaa
 tar -xf aaa
 cd gcc/11.2.0/bin
+ls -alF
 sha256sum *
+for i in *; do
+	codesign --display --verbose --deep *
+	codesign --verify --verbose --deep *
+done
