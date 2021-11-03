@@ -5,8 +5,10 @@ cd gcc/11.2.0/bin
 ls -alF
 sha256sum *
 for i in *; do
-	codesign --display --verbose --deep *
-	codesign --verify --verbose --deep *
+	echo
+	echo "$i
+	codesign --display --verbose --deep "$i"
+	codesign --verify --verbose --deep "$i"
 	echo
 done
 exit 0
