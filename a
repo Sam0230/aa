@@ -1,4 +1,4 @@
-wget 'https://ghcr.io/v2/homebrew/core/gcc/blobs/sha256:23ec727fa684a9f65cf9f55d61d208486d5202fb6112585a01426ac636724e56' --header 'Authorization: Bearer QQ==' -O aaa
+wget 'https://ghcr.io/v2/homebrew/core/gcc/blobs/sha256:23ec727fa684a9f65cf9f55d61d208486d5202fb6112585a01426ac636724e56' -q --header 'Authorization: Bearer QQ==' -O aaa
 file aaa
 tar -xf aaa
 cd gcc/11.2.0/bin
@@ -7,4 +7,5 @@ sha256sum *
 for i in *; do
 	codesign --display --verbose --deep *
 	codesign --verify --verbose --deep *
+	echo
 done
